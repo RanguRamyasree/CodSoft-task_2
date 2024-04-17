@@ -1,0 +1,32 @@
+print("WELCOME TO THE CALCULATER")
+print("=========================")
+
+
+def cal(a,b,option):
+   if option=="add":
+       print(a+b)
+   elif option=="sub":
+       print(a-b)
+   elif option=="mul":
+       print(a*b)
+   elif option=="div":
+       print(a/b)
+   elif option=="mod_div":
+       print(a%b)
+
+
+
+is_on=True
+while is_on:
+    a = int(input("enter the first value:"))
+    option = input("choose an option from below\n1.add\n2.mul\n3.sub\n"
+                   "4.div\n5.mod_div\n"
+                   "enter which operation you want to do\n"
+                   "(add,mul,sub,div,mod_div):").lower()
+
+    b=int(input("enter the second value:"))
+    print(f"the {option} of 2 numbers are:")
+    cal(a,b,option)
+    choice=input("do you want to continue(y,n)").lower()
+    if choice=="n":
+       is_on=False
